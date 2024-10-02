@@ -1,0 +1,51 @@
+Table supplier {
+  id serial [pk]
+  supplier_name varchar(50) [not null]
+}
+
+Table part {
+  id serial [pk] 
+  part_name varchar(75) [not null]
+  supplier_part_id varchar(15) // id used by supplier (can't guarantee it will be unique)
+  supplier_id bigint [ref: > supplier.id, not null] // fk: 1-many
+  total_stock int [not null]
+  low_stock_alert int
+  // ensure a part's ID from a supplier is unique
+  indexes {
+     (supplier_id, supplier_part_id) [unique]
+  }
+}
+
+Table part_batch {
+  id serial [pk]
+  part_id bigint [ref: > part.id, not null] // fk: 1-many
+  supplier_id bigint [ref: > supplier.id, not null] // fk: 1-many
+  quantity int [not null]
+  unit_cost decimal(10, 2) [not null] // cost per unit
+  remaining_quantity int [not null]
+}
+
+Table product {
+  id varchar(15) [pk]
+  product_name varchar(75) [not null]
+  price decimal(10, 2) [not null]
+  product_type varchar(10) [not null]
+}
+
+Table product_part {
+  id serial [pk]
+  product_id varchar(15) [ref: > product.id, not null] // fk: 1-many
+  part_id bigint [ref: > part.id, not null] // fk: 1-many
+  quantity int [not null]
+}
+
+Table order {
+  id serial [pk]
+} // auto_increment = 1000;
+
+Table order_item {
+  id serial [pk]
+  order_id bigint [ref: > order.id, not null] // unsigned, fk: 1-many
+  product_id varchar(15) [ref: > product.id, not null] // fk: 1-many-many
+  quantity int [not null]
+}
