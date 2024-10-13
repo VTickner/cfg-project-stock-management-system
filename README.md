@@ -32,7 +32,7 @@ TODO: Brief explanation about project
   - ⬜ In the DB, create a stored procedure and demonstrate how it runs
   - ❎ In the DB, create a trigger and demonstrate how it runs
   - ⬜ In the DB, create an event and demonstrate how it runs
-  - ⬜ Create a view that uses at least 3-4 base tables; prepare and demonstrate a query that uses the view to produce a logically arranged result set for analysis
+  - ❎ Create a view that uses at least 3-4 base tables; prepare and demonstrate a query that uses the view to produce a logically arranged result set for analysis
   - ⬜ Prepare an example query with group by and having to demonstrate how to extract data from the DB for analysis
 - ⬜ Present a 3 minute presentation to the group explaining the idea behind the DB (use DB diagram), what it is for and how it is expected to be used. Run sample queries to demonstrate how the functions, stored procedures etc work. Show snippets of data stored in the tables.
 
