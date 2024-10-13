@@ -24,13 +24,13 @@ TODO: Brief explanation about project
 - Project core requirements:
   - ❎ Create relational DB with minimum 5 tables
   - ❎ Set Primary and Foreign Key constraints to create relations between the tables
-  - ⬜ Using any type of joins, create a view that combines multiple tables in a logical way
-  - ⬜ In the DB, create a stored function that can be applied to a query in the DB
+  - ❎ Using any type of joins, create a view that combines multiple tables in a logical way
+  - ❎ In the DB, create a stored function that can be applied to a query in the DB
   - ⬜ Prepare an example query with a subquery to demonstrate how to extract data from the DB for analysis
   - ❎ Create DB diagram where all table relations are shown
 - Project advanced requirements (include 2-3 minimum):
   - ⬜ In the DB, create a stored procedure and demonstrate how it runs
-  - ⬜ In the DB, create a trigger and demonstrate how it runs
+  - ❎ In the DB, create a trigger and demonstrate how it runs
   - ⬜ In the DB, create an event and demonstrate how it runs
   - ⬜ Create a view that uses at least 3-4 base tables; prepare and demonstrate a query that uses the view to produce a logically arranged result set for analysis
   - ⬜ Prepare an example query with group by and having to demonstrate how to extract data from the DB for analysis
