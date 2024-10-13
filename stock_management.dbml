@@ -41,7 +41,8 @@ Table product_part {
 
 Table order {
   id serial [pk]
-} // auto_increment = 1000;
+  order_date date [not null]
+}
 
 Table order_item {
   id serial [pk]

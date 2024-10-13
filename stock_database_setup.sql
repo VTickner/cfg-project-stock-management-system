@@ -52,6 +52,7 @@ CREATE TABLE product_part (
 
 CREATE TABLE `order` (
 	id SERIAL,
+	order_date DATE NOT NULL,
   PRIMARY KEY (id)
 );
 
