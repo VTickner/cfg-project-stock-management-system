@@ -92,7 +92,7 @@ ORDER BY p.id;
 SELECT * FROM product_part_supplier_view
 WHERE product_id = 'SS-1';
 
--- use subquery: identify suppliers that may need to be restocked
+-- use subquery: identify parts from suppliers that may need to be restocked
 SELECT 
   p.id AS part_id, 
   p.part_name, 
@@ -109,8 +109,7 @@ WHERE p.id IN (
 )
 ORDER BY p.id;
 
--- use GROUP BY and HAVING: identify suppliers that may need to be restocked
-SELECT 
+-- use GROUP BY and HAVING: identify parts from suppliers that may need to be restocked
   p.id AS part_id, 
   p.part_name, 
   p.total_stock, 
@@ -125,7 +124,7 @@ GROUP BY
 HAVING p.total_stock <= p.low_stock_alert
 ORDER BY p.id;
 
--- use PROCEDURE 1: check for low stock quantities
+-- use PROCEDURE 1: identify parts from suppliers that may need to be restocked
 CALL GetLowStockParts();
 
 -- check whether have enough parts to make 2 of 'Sterling silver heart charm necklace'
